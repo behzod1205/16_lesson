@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    background: radial-gradient(circle, rgba(94, 42, 42, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    font-family: sans-serif;
+    color: #fafafb;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(80, 89, 99, 0.15);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 320px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(8, 9, 10, 0.3);
+}
+
+.signup_form {
+  display: none;
+}
+
+.restore_pass{
+    display: none;
+}
+
+.l_form {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin-bottom: 20px;
+}
+
+.email_login,
+.password,
+.sign_up {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 18px;
+  padding: 10px;
+  color: #000000;
+}
+
+.input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+
+.fb a {
+  display: flex;
+  flex-direction: column;
+  color: #000000;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.fb a:hover {
+  color: rgb(229, 236, 236);
+}
+
+
+.submit {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    background: #000000;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 6%, rgba(87, 79, 79, 1) 50%, rgba(0, 0, 0, 1) 94%);
+    transition: 0.3s;
+    width: 320px;
+}
+
+
+
+
+.sign {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.sign a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.sign a:hover {
+  color: rgb(255, 255, 255);
+}
+
+
+#error {
+  color: red;
+  font-size: 14px;
+}
+
+#acc_cr {
+  color: lime;
+  font-size: 14px;
+}
+
+.header{
+    display: flex;
+    
+}
+
+.my_profile{
+    display: flex;
+    color: #000000;
+    gap: 20px;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.my_profile img{
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgb(246, 80, 80);
+    transition: transorm 0.5 ease;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    gap: 20px;
+}
+
+.my_profile img:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+}

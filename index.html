@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+
+    <form class="login_form">
+
+        <div class="main_form">
+            <h1 class="l_form">Log In</h1>
+
+
+            <div class="email_login">
+                <label for="email_login">Enter Email</label>
+                <input class="input" type="email" name="email_login" id="email_login" required>
+            </div>
+
+        <div class="password">
+            <label for="password">Password</label>
+            <input class="input" type="password" name="password" id="password" required>
+        </div>
+
+        <div class="fb">
+            <a href="#">
+            <span>Forget Password?</span>
+        </a>
+        </div>
+        <input class="submit" type="submit" value="Login">
+
+        <div class="sign">
+            <h4>Not a member?</h4>
+        <a href="#" id="showSignup">
+            <span>Sign Up Now</span>
+        </a>
+        </div>
+        </div>
+
+    </form>
+
+
+    
+    <form class="signup_form">
+
+        <h1 class="l_form">Create Account</h1>
+
+
+        <div class="sign_up">
+            <label for="first_name">First Name</label>
+            <input class="input" type="text" id="first_name" required>
+            
+            <label for="last_name">Last Name</label>
+            <input class="input" type="text" id="last_name" required>
+
+            <label for="email">Email</label>
+            <input class="input" type="email" id="email" required>
+
+
+            <label for="newpassword">Password</label>
+            <input class="input" type="password" id="newpassword" required>
+
+            <label for="confirmpassword" >Confirm Password</label>
+            <input class="input" type="password" id="confirmpassword" required>
+
+            <p id="error" style="color: red; font-size: 20px; display: none">
+                Passwords do not match!
+            </p>
+
+            <p id="acc_cr" style="color: lime; font-size: 20px; display: none">
+                Account created successfully!
+            </p>
+
+            <input class="submit" type="submit" value="Sign Up">
+        </div>
+            
+
+        <div class="sign">
+            <span>Already a member?</span>
+        <a href="#" id="showLogin">Login</a>
+        </div>
+    </form>
+
+
+    <form class="restore_pass">
+        <div class="restore_password">
+            <h1 class="forgot_pass">Forgot Your Password?</h1>
+
+
+            <div class="email_login">
+                <label for="id_pass">Enter ID</label>
+                <input class="input" type="text" name="id_pass" id="id_pass" required>
+            </div>
+
+        </div>
+        <input class="submit" type="submit" value="Get My Password">
+
+        <div class="sign">
+            <a href="#" id="show_login">
+            <span>Log In</span>
+        </a>
+        </div>
+        </div>
+
+    </form>
+
+  <script src="./main.js"></script>
+
+
+</body>
+</html>

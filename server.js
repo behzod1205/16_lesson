@@ -7,7 +7,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: "http://127.0.0.1:5500",
+  origin: "*",
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"]
 }));
@@ -22,7 +22,7 @@ app.post("/send-id", async (req, res) => {
       service: "gmail",
       auth: {
         user: "toxic211205@gmail.com",
-        pass: "rudu hpxs veod brzd"
+        pass: "vbvm pfzl olpa kauw"
       }
     });
 

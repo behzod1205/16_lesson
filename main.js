@@ -56,8 +56,23 @@ sighnupForm.addEventListener("submit", (e) => {
     if (password !== confirm) {
         error.style.display = "block"
     } else {
-        users.push({id: userId, first_name: first_name, last_name: last_name, email: userEmail, password: password})
-        console.log(users)
+        fetch("https://682f107d746f8ca4a47fa71c.mockapi.io/products", {
+        method: "POST",
+        headers: {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify({
+            firstname: first_name,
+            lastname: last_name,
+            email: userEmail,
+            password: password,
+            id: userId
+        })
+        }).then(res => {
+            return res.json()
+        }).then(data => {
+            console.log(data)
+        })
 
         acc_cr.style.display = "block"
         error.style.display = "none"
@@ -69,6 +84,7 @@ sighnupForm.addEventListener("submit", (e) => {
     }
 
     
+        
 
     async function sendUserId(email, userId) {
     let res = await fetch("http://localhost:3000/send-id", {
@@ -89,7 +105,7 @@ sendUserId(userEmail, userId)
 
 })
 
-loginForm.addEventListener("submit", (e) => {
+loginForm.addEventListener("submit", async (e) => {
     e.preventDefault()
 
     const userEmail = document.getElementById("email_login").value.trim()
@@ -97,7 +113,15 @@ loginForm.addEventListener("submit", (e) => {
 
     console.log(userEmail)
     console.log(userPassword)
-    const found = users.find(user => user.email === userEmail && user.password === userPassword)
+
+    const res = await fetch("https://682f107d746f8ca4a47fa71c.mockapi.io/products")
+    const users_api = await res.json()
+
+    console.log(users)
+
+    const found = users_api.find(user => user.email === userEmail && user.password === userPassword)
+
+
 
     console.log(found)
 
